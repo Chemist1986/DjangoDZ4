@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Домашняя страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать на домашнюю страницу!</h1>
+    
+    <p>Урок 4. Работа с формами</p>
+    <a href="{% url 'create_client' %}"><button>Создать клиента</button></a>
+    <a href="{% url 'create_product' %}"><button>Создать товар</button></a>
+    <a href="{% url 'create_order' %}"><button>Создать заказ</button></a>
+    <a href="{% url 'client_ordered_products' client_id=client_id time_period='7' %}">
+        <button>Товары заказанные клиентом за последние 7 дней</button>
+    </a>
+    <a href="{% url 'client_ordered_products' client_id=client_id time_period='30' %}">
+        <button>Товары заказанные клиентом за последние 30 дней</button>
+    </a>
+    <a href="{% url 'client_ordered_products' client_id=client_id time_period='365' %}">
+        <button>Товары заказанные клиентом за последние 365 дней</button>
+    </a>
+</body>
+</html>
